@@ -1,0 +1,19 @@
+﻿@page
+@model iti_project.Pages.NewsletterModel
+@{
+    ViewData["Title"] = "Newsletter";
+}
+
+<h2>Newsletter</h2>
+<h3>Sign up for our boring and spamming newsletter here..</h3>
+
+<div>
+    <form method="post">
+        Email:<br>
+        <input type="email" name="email">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br />
+    <p>@ViewData["confirmation"]</p>
+</div>
