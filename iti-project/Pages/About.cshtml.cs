@@ -11,7 +11,7 @@ namespace iti_project.Pages
     {
         public string Message { get; set; }
         public User Anton { get; set; }
-        public User Niels { get; set; }
+        public User Niels { get; set; } 
         public User Niclas { get; set; }
 
 

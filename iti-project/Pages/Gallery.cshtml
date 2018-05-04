@@ -1,0 +1,20 @@
+﻿@page
+@model GalleryModel
+@using System.IO;
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<div class="container">
+@{
+    //Loop on each file and attach it on img tag
+    foreach (var strFile in @Model.FilesNames)
+    {
+        var path = @Url.Content("~/images/gallery/" + strFile);
+        <a data-fancybox="gallery" href="@path"><img src="@path" width="200"></a>
+
+        //<img id="myImg" src="@path" width="200" />
+    }   
+}
+</div>
+    
