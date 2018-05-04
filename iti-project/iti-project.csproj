@@ -12,5 +12,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="wwwroot\images\gallery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Gallery.cshtml.cs">
+      <DependentUpon>Gallery.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
