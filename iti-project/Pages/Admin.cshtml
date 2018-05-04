@@ -4,6 +4,18 @@
     ViewData["Title"] = "Admin";
 }
 
+<script>
+    function updateSubmitButtonText() {
+        var name = $('#select-user option:selected').val();
+        $('#submit-btn').val('Opdater ' + name);
+    };
+
+    window.onload = updateSubmitButtonText;
+</script>
+
+
+<h2>@ViewData["Title"]</h2>
+
 <div class="container">
     <div class="row justify-content-between">
         <div class="col-lg-5 admin-div">
@@ -12,12 +24,48 @@
                 <p>Billede der skal tilføjes:</p>
                 <input type="file" asp-for="Upload" />
                 <br />
-                <input type="submit" value="Tilføje billede" /> 
+                <input type="submit" value="Tilføj billede" />
             </form>
         </div>
 
         <div class="col-lg-5 admin-div">
             <h3>Opdater om mig</h3>
+            <form method="put">
+                <div class="form-group">
+                    <label for="select-user">Vælg bruger:</label>
+                    <select class="form-control" id="select-user" onchange="updateSubmitButtonText()">
+                        @{
+                        foreach (var User in @Model.Users)
+                        {
+                            <option value="@User.Name">@User.Name</option>
+                        }
+                        }
+                    </select>
+                    <br />
+                    <label for="name">Navn:</label>
+                    <input type="text" class="form-control" id="name" />
+                    <br />
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" />
+                    <br />
+                    <label for="study">Studieretning:</label>
+                    <input type="text" class="form-control" id="study" />
+                    <br />
+                    <label for="semester">Semester:</label>
+                    <input type="number" min="1" max="20" class="form-control" id="semester" />
+                    <br />
+                    <label for="age">Alder:</label>
+                    <input type="number" min="0" max="150" class="form-control" id="age" />
+                    <br />
+                    <label for="birthday">Fødselsdag:</label>
+                    <input type="text" class="form-control" id="birthday" />
+                    <br />
+                    <label for="facebookpassword">Facebook password:</label>
+                    <input type="text" class="form-control" id="facebookpassword" />
+                    <br />
+                    <input id="submit-btn" type="submit" value="Opdater" />
+                </div>
+            </form>
         </div>
     </div>
 </div>
