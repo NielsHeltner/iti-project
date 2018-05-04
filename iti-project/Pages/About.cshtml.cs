@@ -18,7 +18,13 @@ namespace iti_project.Pages
         public void OnGet()
         {
             Message = "Your application description page.";
-            Anton = new User();
+
+            using (var db = new DatabaseContext()) {
+                Anton = db.Users.Where(user => user.Name == "Antonio").First();
+                Niels = db.Users.Where(user => user.Name == "Niels").First();
+                Niclas= db.Users.Where(user => user.Name == "Niclas").First();
+            }
+
         }
     }
 }

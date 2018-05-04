@@ -9,8 +9,7 @@ namespace iti_project.Data
         public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseMySQL("server=localhost;database=library;user=user;password=password");
-
+            optionsBuilder.UseMySQL("server=heltner.net;database=xbugtpgn_iti_project;user=xbugtpgn_admin;password=9_Ak@!Bh8QTd;SslMode=none");
         }
     }
 }

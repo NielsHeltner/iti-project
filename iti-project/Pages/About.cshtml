@@ -5,38 +5,37 @@
 }
 <h2>@ViewData["Title"]</h2>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        
         <div class="col-lg-4 about-div">
         Navn: @Model.Anton.Name <br />
-        E-mail: @Model.Anton.Email<br />
-        Studieretning: <br />
-        Nuværende semester: <br />
-        Alder: <br />
-        Fødselsdage: <br />
-        Facebook password: <br />
+        E-mail: @Model.Anton.Email <br />
+        Studieretning: @Model.Anton.Study <br />
+        Nuværende semester: @Model.Anton.Semester <br />
+        Alder: @Model.Anton.Age <br />
+        Fødselsdage: @Model.Anton.Birthday <br />
+        Facebook password: @Model.Anton.FacebookPassword <br />
         </div> 
         
         <div class="col-lg-4 about-div">
-        Navn: <br />
-        E-mail: <br />
-        Studieretning: <br />
-        Nuværende semester: <br />
-        Alder: <br />
-        Fødselsdage: <br />
-        Facebook password: <br />    
+        Navn: @Model.Niels.Name <br />
+        E-mail: @Model.Niels.Email <br />
+        Studieretning: @Model.Niels.Study <br />
+        Nuværende semester: @Model.Niels.Semester <br />
+        Alder: @Model.Niels.Age <br />
+        Fødselsdage: @Model.Niels.Birthday <br />
+        Facebook password: @Model.Niels.FacebookPassword <br />
         </div>
 
         <div class="col-lg-4 about-div">
-        Navn: <br />
-        E-mail: <br />
-        Studieretning: <br />
-        Nuværende semester: <br />
-        Alder: <br />
-        Fødselsdage: <br />
-        Facebook password: <br />
+        Navn: @Model.Niclas.Name <br />
+        E-mail: @Model.Niclas.Email <br />
+        Studieretning: @Model.Niclas.Study <br />
+        Nuværende semester: @Model.Niclas.Semester <br />
+        Alder: @Model.Niclas.Age <br />
+        Fødselsdage: @Model.Niclas.Birthday <br />
+        Facebook password: @Model.Niclas.FacebookPassword <br />
         </div>
     </div>
 </div>
-
-<p>Use this area to provide additional information.</p>
