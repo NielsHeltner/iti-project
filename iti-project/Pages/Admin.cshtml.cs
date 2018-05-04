@@ -17,6 +17,14 @@ namespace iti_project.Pages
         public IFormFile Upload { get; set; }
         public List<User> Users { get; set; }
 
+        public AdminModel()
+        {
+            using (var db = new DatabaseContext())
+            {
+                Users = db.Users.ToList();
+            }
+        }
+
         public User GetUserByName(string name)
         {
             foreach(User user in Users)
@@ -27,14 +35,6 @@ namespace iti_project.Pages
                 }
             }
             return null;
-        }
-
-        public void OnGet()
-        {
-            using (var db = new DatabaseContext())
-            {
-                Users = db.Users.ToList();
-            }
         }
 
         public async Task OnPostAsync()
