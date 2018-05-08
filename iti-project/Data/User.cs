@@ -16,7 +16,6 @@ namespace iti_project.Data {
         public string FacebookPassword { get; set; }
 
         public User() {
-            this.Name = "Anton";
         }
     }
 }
