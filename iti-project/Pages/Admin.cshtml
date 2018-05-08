@@ -30,10 +30,10 @@
 
         <div class="col-lg-5 admin-div">
             <h3>Opdater om mig</h3>
-            <form method="put">
+            <form method="post">
                 <div class="form-group">
                     <label for="select-user">Vælg bruger:</label>
-                    <select class="form-control" id="select-user" onchange="updateSubmitButtonText()">
+                    <select class="form-control" id="select-user" name="user" onchange="updateSubmitButtonText()">
                         @{
                         foreach (var User in @Model.Users)
                         {
@@ -42,28 +42,25 @@
                         }
                     </select>
                     <br />
-                    <label for="name">Navn:</label>
-                    <input type="text" class="form-control" id="name" />
-                    <br />
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" />
+                    <input type="email" class="form-control" id="email" name="email" />
                     <br />
                     <label for="study">Studieretning:</label>
-                    <input type="text" class="form-control" id="study" />
+                    <input type="text" class="form-control" id="study" name="study" />
                     <br />
                     <label for="semester">Semester:</label>
-                    <input type="number" min="1" max="20" class="form-control" id="semester" />
+                    <input type="number" min="1" max="20" class="form-control" id="semester" name="semester" />
                     <br />
                     <label for="age">Alder:</label>
-                    <input type="number" min="0" max="150" class="form-control" id="age" />
+                    <input type="number" min="0" max="150" class="form-control" id="age" name="age" />
                     <br />
                     <label for="birthday">Fødselsdag:</label>
-                    <input type="text" class="form-control" id="birthday" />
+                    <input type="text" class="form-control" id="birthday" name="birthday" />
                     <br />
                     <label for="facebookpassword">Facebook password:</label>
-                    <input type="text" class="form-control" id="facebookpassword" />
+                    <input type="text" class="form-control" id="facebookpassword" name="facebookpassword" />
                     <br />
-                    <input id="submit-btn" type="submit" value="Opdater" />
+                    <input id="submit-btn" type="submit" value="Opdater" asp-page-handler="UpdateUser" />
                 </div>
             </form>
         </div>

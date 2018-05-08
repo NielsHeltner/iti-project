@@ -45,5 +45,41 @@ namespace iti_project.Pages
                 await Upload.CopyToAsync(fileStream);
             }
         }
+
+        public async Task OnPostUpdateUserAsync()
+        {
+            var Form = Request.Form;
+
+            using (var db = new DatabaseContext())
+            {
+                var UserToUpdate = db.Users.Single(user => user.Name == Form["user"].First());
+                if(Form["email"] != "")
+                {
+                    UserToUpdate.Email = Form["email"];
+                }
+                if (Form["study"] != "")
+                {
+                    UserToUpdate.Study = Form["study"];
+                }
+                if (Form["semester"] != "")
+                {
+                    UserToUpdate.Semester = Form["semester"];
+                }
+                if (Form["age"] != "")
+                {
+                    UserToUpdate.Age = Form["age"];
+                }
+                if (Form["birthday"] != "")
+                {
+                    UserToUpdate.Birthday = Form["birthday"];
+                }
+                if (Form["facebookpassword"] != "")
+                {
+                    UserToUpdate.FacebookPassword = Form["facebookpassword"];
+                }
+
+                db.SaveChanges();
+            }
+        }
     }
 }
