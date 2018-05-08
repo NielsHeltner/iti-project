@@ -18,5 +18,8 @@
     <Compile Update="Pages\Gallery.cshtml.cs">
       <DependentUpon>Gallery.cshtml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\AdminPage.cshtml.cs">
+      <DependentUpon>Admin.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
