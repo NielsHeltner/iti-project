@@ -3,10 +3,44 @@ body {
     padding-bottom: 20px;
 }
 
+.home-title {
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.home-bottom-div {
+    margin-top: 4%;
+    display: inline-block;
+    width: 800px;
+}
+
+.home-picture-div {
+    margin-top: 4%;
+    display: inline-block;
+}
+
+q {
+    font-size: 24px;
+    color: dimgray;
+    font-style: italic;
+}
+
+.quotation-block {
+    text-align: justify;
+    margin-left: 30px;
+    width: 500px;
+}
+
 .about-div {
     background-color: #EEE;
     border: 1px solid #CCC;
     padding: 5px 0px 5px 0px;
+}
+
+.picture-description {
+    margin-top: 5px;
+    font-size: 13px;
+    color: dimgray;
 }
 
 .admin-div {
