@@ -9,6 +9,6 @@ The project contains 4 elements:
   - An admin page, where it is possible to change the about me text and upload new images to the gallery
 
 ## How to run it
-- Download the project from github
-- Import the solution into Visual Studio
-- Press the run button in Visual Studio
+1. Download the project from github
+2. Import the solution into Visual Studio
+3. Press the run button in Visual Studio
