@@ -8,7 +8,7 @@ The project contains four elements:
   - A page to sign up for a newsletter
   - An admin page where it is possible to change the about me content and upload new images to the gallery
 
-## How to run it
+## Running the project
 1 Download or clone the project from git
 2 Import the solution into Visual Studio
 3 Press the run button in Visual Studio
