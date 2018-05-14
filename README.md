@@ -13,7 +13,7 @@ The project contains four elements:
 2. Import the solution into Visual Studio
 3. Press the run button in Visual Studio
 
-OR
+**OR**
 
 1. Download or clone the project from git
 2. Navigate to the `iti-project` folder
