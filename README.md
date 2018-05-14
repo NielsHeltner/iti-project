@@ -9,10 +9,10 @@ The project contains four elements:
   - An admin page where it is possible to change the about me content and upload new images to the gallery
 
 ## Running the project
-1 Download or clone the project from git
-2 Import the solution into Visual Studio
-3 Press the run button in Visual Studio
+1. Download or clone the project from git
+2. Import the solution into Visual Studio
+3. Press the run button in Visual Studio
 OR
-1 Download or clone the project from git
-2 Navigate to the `iti-project` folder
-3 Execute the `dotnet run` command
+1. Download or clone the project from git
+2. Navigate to the `iti-project` folder
+3. Execute the `dotnet run` command
